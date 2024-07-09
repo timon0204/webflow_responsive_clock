@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Styled Clock</title>
+    <style>
+
+        .clock {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .face {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: relative;
+            border: 10px solid #e5e5e5;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hand {
+            position: absolute;
+            background-color: #000;
+            transform-origin: left;
+            top: 50%;
+            left: 50%;
+        }
+
+        .hand.hour {
+            width: 50px;
+            height: 4px;
+            background-color: #333;
+        }
+
+        .hand.minute {
+            width: 70px;
+            height: 4px;
+            background-color: #333;
+        }
+
+        .hand.second {
+            width: 90px;
+            height: 2px;
+            background-color: #ff0000;
+        }
+
+        .center-circle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .number {
+            position: absolute;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            transform-origin: center;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 700px) {
+            .clock {
+                width: 200px;
+                height: 200px;
+            }
+
+            .face {
+                width: 160px;
+                height: 160px;
+            }
+
+            .hand.hour {
+                width: 40px;
+            }
+
+            .hand.minute {
+                width: 60px;
+            }
+
+            .hand.second {
+                width: 80px;
+            }
+
+            .center-circle {
+                width: 10px;
+                height: 10px;
+            }
+
+            .number {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .clock {
+                width: 150px;
+                height: 150px;
+            }
+
+            .face {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hand.hour {
+                width: 30px;
+            }
+
+            .hand.minute {
+                width: 50px;
+            }
+
+            .hand.second {
+                width: 60px;
+            }
+
+            .center-circle {
+                width: 8px;
+                height: 8px;
+            }
+
+            .number {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="face">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second" data-color="#ff0000"></div>
+            <div class="center-circle"></div>
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+        </div>
+    </div>
+</body>
+
+</html>

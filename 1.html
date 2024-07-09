@@ -1,0 +1,214 @@
+<style>
+
+
+    .clock1 {
+        width: 50vw; /* Adjust width relative to viewport width */
+        max-width: 300px; /* Limit maximum width for larger screens */
+        height: 50vw; /* Maintain square aspect ratio */
+        max-height: 300px; /* Limit maximum height for larger screens */
+        background-color: #333;
+        border-radius: 50%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .face1 {
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        background-color: #000;
+        position: relative;
+        overflow: hidden; /* This will clip any overflow */
+    }
+
+    .hand {
+        position: absolute;
+        height: 2px;
+        background-color: #d4af37;
+        transform-origin: center;
+        top: 50%;
+        left: 50%;
+    }
+
+    .hand.hour {
+        width: 20%;
+        transform-origin: left;
+        transform: rotate(120deg);
+    }
+
+    .hand.minute {
+        width: 30%;
+        transform-origin: left;
+        transform: rotate(180deg);
+    }
+
+    .hand.second {
+        width: 40%;
+        background-color: #d4af37;
+        transform-origin: left;
+        transform: rotate(240deg);
+        cursor: pointer;
+    }
+
+    .center-circle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #d4af37;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number0 {
+        position: absolute;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        transform-origin: center;
+    }
+
+    /* Position each number using polar coordinates */
+    .number12 {
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number1 {
+        top: 18%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number2 {
+        top: 30%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number3 {
+        top: 50%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number4 {
+        top: 70%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number5 {
+        top: 82%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number6 {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number7 {
+        top: 82%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number8 {
+        top: 70%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number9 {
+        top: 50%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number10 {
+        top: 30%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
+
+    .number11 {
+        top: 18%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bright-part {
+        width: 60%;
+        height: 60%;
+        top: 90%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    @media (max-width: 600px) {
+        .clock1 {
+            width: 150px;
+            height: 150px;
+        }
+
+        .face1 {
+            width: 120px;
+            height: 120px;
+        }
+
+        .hand.hour {
+            width: 30px;
+        }
+
+        .hand.minute {
+            width: 50px;
+        }
+
+        .hand.second {
+            width: 60px;
+        }
+
+        .center-circle {
+            width: 8px;
+            height: 8px;
+        }
+
+        .number {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<div class="clock1">
+    <div class="face1">
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second" data-color="#d4af37"></div>
+        <div class="center-circle"></div>
+        <div class="number0 number1">1</div>
+        <div class="number0 number2">2</div>
+        <div class="number0 number3">3</div>
+        <div class="number0 number4">4</div>
+        <div class="number0 number5">5</div>
+        <div class="number0 number6">6</div>
+        <div class="number0 number7">7</div>
+        <div class="number0 number8">8</div>
+        <div class="number0 number9">9</div>
+        <div class="number0 number10">10</div>
+        <div class="number0 number11">11</div>
+        <div class="number0 number12">12</div>
+        <div class="bright-part"></div>
+    </div>
+</div>
